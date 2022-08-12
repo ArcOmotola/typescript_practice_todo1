@@ -3,10 +3,11 @@ import { Button, Card } from 'react-bootstrap';
 import { Note } from "../models/note.model";
 
 interface INotesProps {
-    note: Note
+    note: Note,
+    handleDelete: (id: string) => void
 }
 
-const Notes: React.FC<INotesProps> = ({note}) => {
+const Notes: React.FC<INotesProps> = ({note, handleDelete}) => {
   return (
     <div className='mb-3'>
         <Card style={{backgroundColor: note.color}}>
@@ -14,7 +15,7 @@ const Notes: React.FC<INotesProps> = ({note}) => {
                 <Card.Title>{note.title}</Card.Title>
                 <Card.Title>{note.text}</Card.Title>
                 <Card.Subtitle className="text-muted">{note.date}</Card.Subtitle>
-                <Button className='mt-3' variant='danger'>Delete</Button>
+                <Button className='mt-3' variant='danger' onClick={() => handleDelete(note.id)}>Delete</Button>
             </Card.Body>
         </Card>
     </div>
