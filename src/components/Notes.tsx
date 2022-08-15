@@ -8,18 +8,18 @@ interface INotesProps {
 }
 
 const Notes: React.FC<INotesProps> = ({note, handleDelete}) => {
-  return (
-    <div className='mb-3'>
-        <Card style={{backgroundColor: note.color}}>
-            <Card.Body>
-                <Card.Title>{note.title}</Card.Title>
-                <Card.Title>{note.text}</Card.Title>
-                <Card.Subtitle className="text-muted">{note.date}</Card.Subtitle>
-                <Button className='mt-3' variant='danger' onClick={() => handleDelete(note.id)}>Delete</Button>
-            </Card.Body>
-        </Card>
-    </div>
-  );
+    return (
+        <div className='mb-3'>
+            <Card style={{backgroundColor: note.color}}>
+                <Card.Body>
+                    <Card.Title>{note.title}</Card.Title>
+                    <Card.Title>{note.text}</Card.Title>
+                    <Card.Subtitle className="text-muted">{note.date}</Card.Subtitle>
+                    <Button className='mt-3' variant='danger' onClick={() => handleDelete(note.id)}>Delete</Button>
+                </Card.Body>
+            </Card>
+        </div>
+    );
 };
 
 export default Notes;
