@@ -22,6 +22,20 @@ function App() {
 
   return (
     <>
+      {/* <Header />
+      <Container className='mt-5' >
+        <Row>
+          <Col>
+          <NotesList notes={notes} setNotes={setNotes}/>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+          <CreateNotes notes={notes} setNotes={setNotes}/>
+          </Col>
+        </Row>
+      </Container> */}
+
       <Header />
       <Container className='mt-5' >
         <Row>
