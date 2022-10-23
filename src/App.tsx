@@ -1,24 +1,21 @@
-import React, { useState } from 'react';
-import { Note } from './models/note.model';
-import './App.css';
-import Header from './components/Header';
-import { Col, Container, Row } from 'react-bootstrap';
-import NotesList from './components/NotesList';
-import CreateNotes from './components/CreateNotes';
-
-
-
-
-
+import React, { useState } from "react";
+import { Note } from "./models/note.model";
+import "./App.css";
+import Header from "./components/Header";
+import { Col, Container, Row } from "react-bootstrap";
+import NotesList from "./components/NotesList";
+import CreateNotes from "./components/CreateNotes";
 
 function App() {
-  const [notes, setNotes] = useState<Note[]>([{
-    id: (new Date()).toString(),
-    title: "Meetings",
-    text: "Schedule a meeting with UI/UX Team",
-    color: "#dfdfdf",
-    date: (new Date()).toString()
-  }])
+  const [notes, setNotes] = useState<Note[]>([
+    {
+      id: new Date().toString(),
+      title: "Meetings",
+      text: "Schedule a meeting with the UI/UX Team",
+      color: "#dfdfdf",
+      date: new Date().toString(),
+    },
+  ]);
 
   return (
     <>
@@ -37,15 +34,15 @@ function App() {
       </Container> */}
 
       <Header />
-      <Container className='mt-5' >
+      <Container className="mt-5">
         <Row>
           <Col>
-          <NotesList notes={notes} setNotes={setNotes}/>
+            <NotesList notes={notes} setNotes={setNotes} />
           </Col>
         </Row>
         <Row>
           <Col>
-          <CreateNotes notes={notes} setNotes={setNotes}/>
+            <CreateNotes notes={notes} setNotes={setNotes} />
           </Col>
         </Row>
       </Container>
