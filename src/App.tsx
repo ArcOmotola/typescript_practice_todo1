@@ -10,7 +10,7 @@ function App() {
   const [notes, setNotes] = useState<Note[]>([
     {
       id: new Date().toString(),
-      title: "Meetings",
+      title: "Meeting",
       text: "Schedule a meeting with the UI/UX Team",
       color: "#dfdfdf",
       date: new Date().toString(),
