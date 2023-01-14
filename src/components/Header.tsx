@@ -7,7 +7,7 @@ const Header: React.FunctionComponent<IHeaderProps> = (props) => {
   return (
     <Navbar fixed="top" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand>React Typescript Bootstrap Tutorial....</Navbar.Brand>
+        <Navbar.Brand>React Typescript Bootstrap Tutorial...</Navbar.Brand>
       </Container>
     </Navbar>
   );
