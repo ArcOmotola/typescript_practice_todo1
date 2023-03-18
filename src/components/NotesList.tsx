@@ -11,7 +11,7 @@ const NotesList: React.FC<INotesListProps> = ({ notes, setNotes }) => {
     const handleDelete = (id: string) => {
         setNotes(notes.filter(note => note.id !== id));
     }
-
+   
 
     const renderNotes = ():JSX.Element[] => {
         return notes.map(note => {
