@@ -61,7 +61,7 @@ const CreateNotes: React.FunctionComponent<ICreateNotesProps> = ({
           />
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Label htmlFor="colorInput">Notes Color.</Form.Label>
+          <Form.Label htmlFor="colorInput">Notes Color</Form.Label>
           <Form.Control
             type="color"
             id="colorInput"
